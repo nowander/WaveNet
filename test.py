@@ -28,12 +28,9 @@ print('USE GPU:', opt.gpu_id)
 model = SF4_Stu()
 print('NOW USING:SF4_Stu')
 # ICNnet uses 180 epoch
-# model.load_state_dict(torch.load('/home/sunfan/1212121212/pth/SSSFF6_RES0809/SSFFF6_RES_best_mae_test.pth'))
-# model.load_state_dict(torch.load('/home/sunfan/1212121212/pth/SSSFF4/SSFFF4_VGG_best_mae_test.pth'))
-model.load_state_dict(torch.load('/media/sunfan/date/Paper_4/Wave/PTH_RGBT/Ablation_KD_val1000_RGBT/RES34_1_epoch_30_test.pth'))
-# model.load_state_dict(torch.load("/media/sunfan/date/Paper_4/Wave/PTH_RGBT/服务器4/Ablation_CSW_384_val1000_RGBT/RES34_1_epoch_60_test.pth"))
-# model.load_pre("/media/sunfan/date/Paper_4/Wave/PTH_KD/Wave_SF4_Stu_RGBT_KD/RES34_1_best_mae_test.pth")
-# model.load_state_dict(torch.load('/home/sunfan/1212121212/pth/SFNet6_Res_best_mae.pth'))
+
+model.load_state_dict(torch.load('/media/sunfan/date/Paper_4/Wave/PTH_RGBT/Ablation_KD_val1000_RGBT/RES34_1_epoch_test.pth'))
+
 model.cuda()
 model.eval()
 
@@ -46,8 +43,7 @@ test_datasets = ['VT800','VT1000','VT5000']
 for dataset in test_datasets:
 
     mae_sum  = 0
-    save_path = '/media/sunfan/date/Paper_4/Wave/Salient_maps_RGBT/Ablation/Wave_Ablation_KD_30_RGBT/' + dataset + '/'
-    # save_path = '/media/sunfan/date/Paper_4/Wave/Salient_maps_RGBT/Ablation/Ablation_SP_60_RGBT/' + dataset + '/'
+    save_path = '/media/sunfan/date/Paper_4/Wave/Salient_maps_RGBT/Ablation/Wave_Ablation_KD_RGBT/' + dataset + '/'
     if not os.path.exists(save_path):
         os.makedirs(save_path)
     image_root = dataset_path + dataset + '/RGB/'
