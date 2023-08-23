@@ -1,11 +1,65 @@
-# WaveNet: Wavelet Network via Knowledge Distillation for RGB-T Salient Object Detection
+# WaveNet
+This project provides the code and results for 'WaveNet: Wavelet Network With Knowledge Distillation for RGB-T Salient Object Detection', IEEE TIP, 2023. [IEEE link](https://ieeexplore.ieee.org/document/10127616)  <br>
 
-1. We are busy with some project tasks recently, and we will update the complete code as soon as possible, please wait patiently, thanks!
-2. For now, you can make comparisons by getting predictions directly from the link below.
-   
-*weight*：https://pan.baidu.com/s/1UI2uTUsnI82qqgs7wIHS5w 
-pin：xzx2 
+# Requirements
+Python 3.7+, Pytorch 1.5.0+, Cuda 10.2+, TensorboardX 2.1, opencv-python, pytorch_wavelets, timm. <br>
+
+# Architecture and Details
+
+<img src="images/a.png" alt="drawing" /> 
+
+# Results
+<img src="images/r.png" alt="drawing"/>
 
 
-*predicts*：https://pan.baidu.com/s/1L6gF3hT8ML3uN_p2va4n8w 
-pin：gl01
+# Preparation
+ - Download the RGB-T raw data from [LSNet](https://github.com/zyrant/LSNet). <br>
+ - Options: Download the pre-trained wavemlp-s from [wavemlp](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/wavemlp_pytorch). <br>
+
+# Training & Testing
+modify the `train_root` `train_root` `save_path` path in `config.py` according to your own data path.
+- Train the LSNet:
+
+    `python train.py`
+    
+modify the `test_path` path in `config.py` according to your own data path.
+
+- Test the LSNet:   
+
+    `python test.py`
+
+Note that `task` in  `config.py`  determines which task and dataset to use.
+
+# Evaluate tools
+- You can select one of toolboxes to get the metrics
+[CODToolbox](https://github.com/DengPingFan/CODToolbox)  / [PySODMetrics](https://github.com/lartpang/PySODMetrics)
+
+# Saliency Maps
+- RGB-T [baidu](https://pan.baidu.com/s/1i5GwM0C0OfE5D5VLXlBkVA) pin: gl01 <br>
+
+
+# Pretraining Models
+- RGB-T [baidu](https://pan.baidu.com/s/1PGwu3uVRWyFS1erOBr7KAg) pin: v5pb <br>
+
+# Citation
+        @ARTICLE{10127616,
+            author={Zhou, Wujie and Sun, Fan and Jiang, Qiuping and Cong, Runmin and Hwang, Jenq-Neng},
+            journal={IEEE Transactions on Image Processing}, 
+            title={WaveNet: Wavelet Network With Knowledge Distillation for RGB-T Salient Object Detection}, 
+            year={2023},
+            volume={32},
+            number={},
+            pages={3027-3039},
+            doi={10.1109/TIP.2023.3275538}}     
+                    
+# Acknowledgement
+
+The implement of this project is based on the codebases bellow. <br>
+- [BBS-Net](https://github.com/zyjwuyan/BBS-Net) <br>
+- [LSNet](https://github.com/zyrant/LSNet) <br>
+- [Wavemlp](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/wavemlp_pytorch) <br>
+- Evaluate tools [CODToolbox](https://github.com/DengPingFan/CODToolbox)  / [PySODMetrics](https://github.com/lartpang/PySODMetrics)<br>
+
+If you find this project helpful, Please also cite codebases above. Besides, we also thank [zyrant](https://github.com/zyrant) for the details discussion.
+# Contact
+Please drop me an email for any problems or discussion: https://wujiezhou.github.io/ (wujiezhou@163.com).
