@@ -175,12 +175,12 @@ def train(train_loader, model, optimizer, epoch, save_path):
         logging.info('#TRAIN#:Epoch [{:03d}/{:03d}], Loss_AVG: {:.4f}'.format(epoch+1, opt.epoch, loss_all))
         writer.add_scalar('Loss-epoch', loss_all, global_step=epoch)
         if (epoch+1) % 10 == 0 or (epoch+1) == opt.epoch:
-            torch.save(model.state_dict(), save_path + 'RES34_1_epoch_{}_test.pth'.format(epoch+1))
+            torch.save(model.state_dict(), save_path + 'Epoch_{}_test.pth'.format(epoch+1))
     except KeyboardInterrupt:
         print('Keyboard Interrupt: save model and exit.')
         if not os.path.exists(save_path):
             os.makedirs(save_path)
-        torch.save(model.state_dict(), save_path + 'RES34_1_epoch_{}_test.pth'.format(epoch + 1))
+        torch.save(model.state_dict(), save_path + 'Epoch_{}_test.pth'.format(epoch + 1))
         print('save checkpoints successfully!')
         raise
 
@@ -214,7 +214,7 @@ def test(test_loader, model, epoch, save_path):
             if mae < best_mae:
                 best_mae = mae
                 best_epoch = epoch
-                torch.save(model.state_dict(), save_path + 'RES34_1_best_mae_test.pth')
+                torch.save(model.state_dict(), save_path + 'Best_mae_test.pth')
                 print('best epoch:{}'.format(epoch))
         logging.info('#TEST#:Epoch:{} MAE:{} bestEpoch:{} bestMAE:{}'.format(epoch, mae, best_epoch, best_mae))
 
