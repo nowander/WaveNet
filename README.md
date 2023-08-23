@@ -16,7 +16,7 @@ Python 3.7+, Pytorch 1.5.0+, Cuda 10.2+, TensorboardX 2.1, opencv-python, pytorc
 # Preparation
  - Download the RGB-T raw data from [LSNet](https://github.com/zyrant/LSNet). <br>
  - Options: Download the pre-trained wavemlp-s from [wavemlp](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/wavemlp_pytorch). <br>
- We have two ways of training knowledge distillation:
+ - We have two ways of training knowledge distillation:
     1. Load the SwinNet model, please refer to the specific configuration of [SwinNet](https://github.com/liuzywen/SwinNet). 
     2. Directly load the prediction maps of SwinNet [baidu](https://pan.baidu.com/s/18qwaTwTZ39XtWlP3JaeSOQ) pin: py5y. <br>
 We use prediction maps of SwinNet as default setting.
