@@ -35,8 +35,6 @@ modify the `test_path` path in `config.py` according to your own data path.
 
     `python test.py`
 
-Note that `task` in  `config.py`  determines which task and dataset to use.
-
 # Evaluate tools
 - You can select one of toolboxes to get the metrics
 [CODToolbox](https://github.com/DengPingFan/CODToolbox)  / [PySODMetrics](https://github.com/lartpang/PySODMetrics)
