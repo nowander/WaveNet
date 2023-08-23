@@ -353,16 +353,3 @@ if __name__=='__main__':
 
     net = WaveNet().cuda()
 
-    # """修改权重
-    from config import opt
-    save_path = opt.save_path
-    net = WaveNet().cuda(0)
-    pth = torch.load('/home/hjk/桌面/代码/Wave_Swin_384_Stu_val1000_RGBT_share.pth')
-    net.load_state_dict(
-        torch.load('/home/hjk/桌面/代码/Wave_Swin_384_Stu_val1000_RGBT_share.pth'),strict=False)
-    print()
-    net.eval()
-    with torch.no_grad():
-        torch.save(net.state_dict(), '/home/hjk/桌面/代码/RES34_1_best_mae_test.pth')
-
-    # """
