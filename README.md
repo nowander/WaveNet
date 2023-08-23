@@ -25,13 +25,13 @@ We use prediction maps of SwinNet as default setting.
 
 # Training & Testing
 modify the `train_root` `train_root` `save_path` path in `config.py` according to your own data path.
-- Train the LSNet:
+- Train the WaveNet:
 
     `python train.py`
     
 modify the `test_path` path in `config.py` according to your own data path.
 
-- Test the LSNet:   
+- Test the WaveNet:   
 
     `python test.py`
 
