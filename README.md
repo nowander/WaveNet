@@ -1,7 +1,7 @@
 # WaveNet
 This project provides the code and results for 'WaveNet: Wavelet Network With Knowledge Distillation for RGB-T Salient Object Detection', IEEE TIP, 2023. [IEEE link](https://ieeexplore.ieee.org/document/10127616)  <br>
 
-- Old codebase https://github.com/nowander/WaveNet/tree/default
+- Old codebase: https://github.com/nowander/WaveNet/tree/default
 # Requirements
 Python 3.7+, Pytorch 1.5.0+, Cuda 10.2+, TensorboardX 2.1, opencv-python, pytorch_wavelets, timm. <br>
 
