@@ -19,24 +19,24 @@ Python 3.7+, Pytorch 1.5.0+, Cuda 10.2+, TensorboardX 2.1, opencv-python, pytorc
  - We have two ways of training knowledge distillation:
     1. Load the SwinNet model, please refer to the specific configuration of [SwinNet](https://github.com/liuzywen/SwinNet). 
     2. Directly load the prediction maps of SwinNet [baidu](https://pan.baidu.com/s/18qwaTwTZ39XtWlP3JaeSOQ) pin: py5y. <br>
-We use prediction maps of SwinNet as default setting.
+We use prediction maps of SwinNet as the default setting.
 
 
 
 # Training & Testing
-modify the `train_root` `train_root` `save_path` path in `config.py` according to your own data path.
+Modify the `train_root` `train_root` `save_path` path in `config.py` according to your own data path.
 - Train the WaveNet:
 
     `python train.py`
     
-modify the `test_path` path in `config.py` according to your own data path.
+Modify the `test_path` path in `config.py` according to your own data path.
 
 - Test the WaveNet:   
 
     `python test.py`
 
 # Evaluate tools
-- You can select one of toolboxes to get the metrics
+- You can select one of the toolboxes to get the metrics
 [CODToolbox](https://github.com/DengPingFan/CODToolbox)  / [PySODMetrics](https://github.com/lartpang/PySODMetrics)
 
 # Saliency Maps
@@ -59,13 +59,13 @@ modify the `test_path` path in `config.py` according to your own data path.
                     
 # Acknowledgement
 
-The implement of this project is based on the codebases bellow. <br>
+The implementation of this project is based on the codebases below. <br>
 - [BBS-Net](https://github.com/zyjwuyan/BBS-Net) <br>
 - [LSNet](https://github.com/zyrant/LSNet) <br>
 - [Wavemlp](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/wavemlp_pytorch) <br>
 - Evaluate tools [CODToolbox](https://github.com/DengPingFan/CODToolbox)  / [PySODMetrics](https://github.com/lartpang/PySODMetrics)<br>
 
-If you find this project helpful, Please also cite codebases above. Besides, we also thank [zyrant](https://github.com/zyrant) for the details discussion.
+If you find this project helpful, Please also cite the codebases above. Besides, we also thank [zyrant](https://github.com/zyrant).
 
 # Contact
 Please drop me an email for any problems or discussion: https://wujiezhou.github.io/ (wujiezhou@163.com).
