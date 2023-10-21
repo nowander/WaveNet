@@ -40,7 +40,7 @@ Modify the `test_path` path in `config.py` according to your own data path.
 [CODToolbox](https://github.com/DengPingFan/CODToolbox)  / [PySODMetrics](https://github.com/lartpang/PySODMetrics)
 
 # Saliency Maps
-- RGB-T [baidu](https://pan.baidu.com/s/1i5GwM0C0OfE5D5VLXlBkVA) pin: gl01 <br>
+- RGB-T [baidu](https://pan.baidu.com/s/1L6gF3hT8ML3uN_p2va4n8w) pin: gl01 <br>
 
 
 # Pretraining Models
